@@ -47,6 +47,11 @@ To run it:
 grunt trimtrailingspaces
 ```
 
+## Dependencies
+
+This module depends only on one 3rd party module, namely [string.js](http://stringjs.com/).
+
+
 ## License
 Copyright (c) 2013 Juga Paazmaya <olavic@gmail.com>
 Licensed under the MIT license.

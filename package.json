@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "string": "~"
+    "string": "~1.4.0"
   },
   "keywords": [],
   "readmeFilename": "README.md"

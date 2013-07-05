@@ -22,16 +22,11 @@
     }
   ],
   "main": "Gruntfile.js",
-  "engines": {
-    "node": "*"
-  },
-  "peerDependencies": {
-    "grunt": ">= 0.4.0 < 0.5"
-  },
-  "devDependencies": {
+  "dependencies": {
     "grunt": "~0.4.1",
     "string": "~1.4.0"
   },
-  "keywords": [],
-  "readmeFilename": "README.md"
+  "keywords": [
+    "trim", "space", "trailing", "blank", "eol"
+  ]
 }

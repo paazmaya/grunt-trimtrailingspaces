@@ -52,6 +52,12 @@ grunt trimtrailingspaces
 This module depends only on one 3rd party module, namely [string.js](http://stringjs.com/).
 
 
+## Known issues
+
+* In case `shelljs` is present in the same Grunt configuration, an error message `to: wrong parametres` will be shown,
+  but it has no effect on the functionality of this plugin
+
 ## License
 Copyright (c) 2013 Juga Paazmaya <olavic@gmail.com>
+
 Licensed under the MIT license.

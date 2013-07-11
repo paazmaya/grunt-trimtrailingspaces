@@ -61,6 +61,13 @@ This module depends only on one 3rd party module, namely [string.js](http://stri
 * In case `shelljs` is present in the same Grunt configuration, an error message `to: wrong parametres` will be shown,
   but it has no effect on the functionality of this plugin
 
+  
+## Changelog
+
+* 2013-07-11    v0.2.0    Support for Grunt 'src' files array
+* 2013-07-05    v0.1.0    Initial release
+
+
 ## License
 Copyright (c) 2013 Juga Paazmaya <olavic@gmail.com>
 

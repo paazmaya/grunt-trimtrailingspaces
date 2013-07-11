@@ -2,6 +2,7 @@
 
 Trim trailing spaces from each line of the selected files
 
+
 ## Getting Started
 
 Add this to your project's `Gruntfile.js` gruntfile:
@@ -15,7 +16,7 @@ npm install grunt-trimtrailingspaces --save-dev
 ```
 Or by manually editing the "package.json" by adding the following line inside `devDependencies` object:
 ```js
-  "grunt-trimtrailingspaces": "~0.1.0"
+  "grunt-trimtrailingspaces": "~0.2.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -23,6 +24,7 @@ Later on it would be possible to install the plugin with the command `npm instal
 It can be updated with the command `npm update`, in case there is a newer version in the NPM repository.
 
 The name to use in your own task definitions is `trimtrailingspaces`.
+
 
 ## Documentation
 
@@ -33,9 +35,11 @@ files of which will the trailing spaces to be removed.
   ...
 
   trimtrailingspaces: {
-    extensions: ['js', 'css', 'html'],
-    directories: ['.', 'templates', 'public_html/js', 'public_html/css'],
-    encoding: 'utf8'
+    main: {
+      src: ['public_html/js/**/*.js'],
+      filter: 'isFile',
+      encoding: 'utf8'
+    }
   }
 
   ...

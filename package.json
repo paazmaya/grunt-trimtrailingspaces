@@ -27,6 +27,6 @@
     "string": "~1.4.0"
   },
   "keywords": [
-    "trim", "space", "trailing", "blank", "eol"
+    "trim", "space", "trailing", "blank", "eol", "gruntplugin"
   ]
 }

@@ -10,8 +10,6 @@ module.exports = function(grunt) {
   'use strict';
 
   grunt.registerMultiTask('trimtrailingspaces', 'Removing the trailing spaces', function() {
-    var S = require('string'), // in case shelljs is present in the same configuration, error message 'to: wrong parametres' will be shown, but it has no effect on the functionality of this plugin
-      fs = require('fs');
       
     // Default options extended with user defined
     var options = this.options({
@@ -26,17 +24,17 @@ module.exports = function(grunt) {
     this.filesSrc.forEach(function(file) {
       grunt.verbose.writeln('Processing file: ' + file);
       
-      var content = fs.readFileSync(
+      var content = grunt.file.read(
         file,
         fsOptions
       );
       
       var trimmed = [];
       content.split("\n").forEach(function (line) {
-        trimmed.push(S(line).trimRight().s);
+        trimmed.push(line.replace(/\s+$/, ''));
       });
 
-      fs.writeFileSync(
+      grunt.file.write(
         file,
         trimmed.join("\n"),
         fsOptions

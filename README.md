@@ -1,6 +1,6 @@
 # grunt-trimtrailingspaces
 
-Trim trailing spaces from each line of the selected files
+> Trim trailing spaces from each line of the selected files
 
 
 ## Getting Started
@@ -16,7 +16,7 @@ npm install grunt-trimtrailingspaces --save-dev
 ```
 Or by manually editing the "package.json" by adding the following line inside `devDependencies` object:
 ```js
-  "grunt-trimtrailingspaces": "~0.2.0"
+  "grunt-trimtrailingspaces": "~0.2.1"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -51,19 +51,10 @@ To run it:
 grunt trimtrailingspaces
 ```
 
-## Dependencies
-
-This module depends only on one 3rd party module, namely [string.js](http://stringjs.com/).
-
-
-## Known issues
-
-* In case `shelljs` is present in the same Grunt configuration, an error message `to: wrong parametres` will be shown,
-  but it has no effect on the functionality of this plugin
-
   
 ## Changelog
 
+* 2013-07-25    v0.2.1    Removed `string.js` dependency and use `grunt.file` API
 * 2013-07-11    v0.2.0    Support for Grunt 'src' files array
 * 2013-07-05    v0.1.0    Initial release
 

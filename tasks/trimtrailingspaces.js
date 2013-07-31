@@ -20,26 +20,37 @@ module.exports = function(grunt) {
     var fsOptions = {
       encoding: options.encoding
     };
-     
-    this.filesSrc.forEach(function(file) {
-      grunt.verbose.writeln('Processing file: ' + file);
+    
+    this.files.forEach(function(file) {
       
-      var content = grunt.file.read(
-        file,
-        fsOptions
-      );
+      // Iterate src as that is where the actual files are
+      file.src.forEach(function(src) {
+        grunt.verbose.writeln('Processing file: ' + src);
+           
+        var content = grunt.file.read(
+          src,
+          fsOptions
+        );
       
-      var trimmed = [];
-      content.split("\n").forEach(function (line) {
-        trimmed.push(line.replace(/\s+$/, ''));
-      });
-
-      grunt.file.write(
-        file,
-        trimmed.join("\n"),
-        fsOptions
-      );
-
+        // TODO: would multiline trim regex be more efficient?
+        var trimmed = [];
+        content.split("\n").forEach(function (line) {
+          trimmed.push(line.replace(/\s+$/, ''));
+        });
+        
+        // dest might be undefined, thus use same directory as src
+        var destination = src;
+        if (typeof file.dest !== 'undefined') {
+          destination = file.dest + '/' + src.split('/').pop();
+        }
+        
+        grunt.file.write(
+          destination,
+          trimmed.join("\n"),
+          fsOptions
+        );
+        
+       });
     });
     
   });

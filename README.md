@@ -31,12 +31,34 @@ The name to use in your own task definitions is `trimtrailingspaces`.
 Add an entry to your "Gruntfile.js", within the `initConfig` object, which will define the 
 files of which will the trailing spaces to be removed.
 
+By using the `src` property for selecting files to be processed, they are replaced by the ones processed.
+
 ```js
   ...
 
   trimtrailingspaces: {
     main: {
       src: ['public_html/js/**/*.js'],
+      filter: 'isFile',
+      encoding: 'utf8'
+    }
+  }
+
+  ...
+```
+
+It is possible to save the processed files to a different location by using the `files` property, as shown below.
+The destination (key) should be a directory path in which the files are stored.
+Please note that this method will create a flat directory of the result.
+
+```js
+  ...
+
+  trimtrailingspaces: {
+    main: {
+      files: {
+        'public_html/js/trimmed': ['public_html/js/**/*.js']
+      },
       filter: 'isFile',
       encoding: 'utf8'
     }

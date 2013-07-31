@@ -11,12 +11,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     jshint: {
       files: [
-        "Gruntfile.js", 
-        "tasks/*.js", 
-        '<%= nodeunit.tests %>' 
+        'Gruntfile.js',
+        'tasks/*.js',
+        '<%= nodeunit.tests %>'
       ],
       options: {
-        jshintrc: ".jshintrc"
+        jshintrc: '.jshintrc'
       }
     },
 
@@ -45,9 +45,9 @@ module.exports = function(grunt) {
     
   });
 
-  grunt.loadTasks("tasks");
+  grunt.loadTasks('tasks');
 
-  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 

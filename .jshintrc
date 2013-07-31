@@ -1,14 +1,21 @@
 {
+  "boss": true,
   "curly": true,
   "eqeqeq": true,
-  "immed": true,
-  "latedef": true,
-  "newcap": true,
-  "noarg": true,
-  "sub": true,
-  "undef": true,
-  "boss": true,
   "eqnull": true,
-  "node": true,
-  "es5": true
+  "expr": true,
+  "immed": true,
+  "noarg": true,
+  "onevar": true,
+  "smarttabs": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+  "indent": 2,
+  "strict": true,
+  "maxparams": 3,
+  "maxdepth": 5,
+  "globals": {
+    "node": true
+  }
 }

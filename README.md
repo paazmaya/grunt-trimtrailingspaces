@@ -16,7 +16,7 @@ npm install grunt-trimtrailingspaces --save-dev
 ```
 Or by manually editing the "package.json" by adding the following line inside `devDependencies` object:
 ```js
-  "grunt-trimtrailingspaces": "~0.2.1"
+  "grunt-trimtrailingspaces": "~0.3.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -48,7 +48,9 @@ By using the `src` property for selecting files to be processed, they are replac
 ```
 
 It is possible to save the processed files to a different location by using the `files` property, as shown below.
-The destination (key) should be a directory path in which the files are stored.
+The destination (key) should be a directory path in which the src files (array value) are stored. 
+No trailing slash needed.
+
 Please note that this method will create a flat directory of the result.
 
 ```js
@@ -76,6 +78,7 @@ grunt trimtrailingspaces
   
 ## Changelog
 
+* 2013-07-31    v0.3.0    Added tests and made it possible to save processed files to other location
 * 2013-07-25    v0.2.1    Removed `string.js` dependency and use `grunt.file` API
 * 2013-07-11    v0.2.0    Support for Grunt 'src' files array
 * 2013-07-05    v0.1.0    Initial release

@@ -14,10 +14,8 @@ module.exports = function(grunt) {
     // Default options extended with user defined
     var options = this.options({
       encoding: 'utf8'
-    });
-    
-    // Filesystem access options
-    var fsOptions = {
+    }),
+    fsOptions = { // Filesystem access options
       encoding: options.encoding
     };
     
@@ -27,30 +25,23 @@ module.exports = function(grunt) {
       file.src.forEach(function(src) {
         grunt.verbose.writeln('Processing file: ' + src);
            
-        var content = grunt.file.read(
-          src,
-          fsOptions
-        );
+        var content = grunt.file.read(src, fsOptions),
+            trimmed = [],
+            destination = src;
       
         // TODO: would multiline trim regex be more efficient?
-        var trimmed = [];
         content.split("\n").forEach(function (line) {
           trimmed.push(line.replace(/\s+$/, ''));
         });
         
         // dest might be undefined, thus use same directory as src
-        var destination = src;
         if (typeof file.dest !== 'undefined') {
           destination = file.dest + '/' + src.split('/').pop();
         }
         
-        grunt.file.write(
-          destination,
-          trimmed.join("\n"),
-          fsOptions
-        );
+        grunt.file.write(destination, trimmed.join("\n"), fsOptions);
         
-       });
+      });
     });
     
   });

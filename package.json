@@ -1,7 +1,7 @@
 {
   "name": "grunt-trimtrailingspaces",
   "description": "Trim trailing spaces from each line of the selected files",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/paazmaya/grunt-trimtrailingspaces",
   "author": {
     "name": "Juga Paazmaya",

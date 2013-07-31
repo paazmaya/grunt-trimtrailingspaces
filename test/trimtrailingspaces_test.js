@@ -30,8 +30,8 @@ exports.trimtrailingspaces = {
   main: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default');
-    var expected = grunt.file.read('test/expected/default');
+    var actual = grunt.file.read('tmp/default'),
+      expected = grunt.file.read('test/expected/default');
     test.equal(actual, expected, 'simple one line trim');
 
     test.done();

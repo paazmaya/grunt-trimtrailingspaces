@@ -2,6 +2,8 @@
 
 > Trim trailing spaces from each line of the selected files
 
+[![Build Status](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces.png?branch=master)](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces)
+
 
 ## Getting Started
 

@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces.png?branch=master)](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces)
 
+[![Dependency Status](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces.png)](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces)
 
 ## Getting Started
 

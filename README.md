@@ -3,21 +3,26 @@
 > Trim trailing spaces from each line of the selected files
 
 [![Build Status](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces.png?branch=master)](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces)
-
+[![Code Climate](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces.png)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces)
 [![Dependency Status](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces.png)](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paazmaya/grunt-trimtrailingspaces/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ## Getting Started
 
 Add this to your project's `Gruntfile.js` gruntfile:
+
 ```js
 grunt.loadNpmTasks('grunt-trimtrailingspaces');
 ```
 
 Then add "grunt-trimtrailingspaces" to your package.json dependencies. This can be done with:
+
 ```js
 npm install grunt-trimtrailingspaces --save-dev
 ```
+
 Or by manually editing the "package.json" by adding the following line inside `devDependencies` object:
+
 ```js
   "grunt-trimtrailingspaces": "~0.3.0"
 ```
@@ -89,10 +94,8 @@ grunt trimtrailingspaces
 
 
 ## License
+
 Copyright (c) 2013 Juga Paazmaya <olavic@gmail.com>
 
 Licensed under the MIT license.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paazmaya/grunt-trimtrailingspaces/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

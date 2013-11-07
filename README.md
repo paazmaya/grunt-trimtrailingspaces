@@ -41,6 +41,8 @@ files of which will the trailing spaces to be removed.
 
 By using the `src` property for selecting files to be processed, they are replaced by the ones processed.
 
+The examples below are using the [built-in custom filter property](http://gruntjs.com/configuring-tasks#custom-filter-function).
+
 ```js
   ...
 

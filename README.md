@@ -88,12 +88,14 @@ grunt trimtrailingspaces
   
 ## Changelog
 
+* 2013-11-07    v0.3.2    Documentation for `filter` in examples
 * 2013-08-28    v0.3.1    Dependency update to Node.js 0.10 from 0.8
 * 2013-07-31    v0.3.0    Added tests and made it possible to save processed files to other location
 * 2013-07-25    v0.2.1    Removed `string.js` dependency and use `grunt.file` API
 * 2013-07-11    v0.2.0    Support for Grunt 'src' files array
 * 2013-07-05    v0.1.0    Initial release
 
+---
 
 ## License
 

@@ -89,6 +89,10 @@ Please note that this method will create a flat directory of the result.
   ...
 ```
 
+For further information on how files are matched, please see the 
+documentation of the [minimatch](https://github.com/isaacs/minimatch) package,
+as it is used underneath Grunt.
+
 To run it:
 
 ```js

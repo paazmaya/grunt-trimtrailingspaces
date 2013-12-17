@@ -6,6 +6,7 @@
 [![Code Climate](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces.png)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces)
 [![Dependency Status](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces.png)](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paazmaya/grunt-trimtrailingspaces/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Getting Started
 

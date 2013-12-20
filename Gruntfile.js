@@ -6,18 +6,18 @@
  * Licensed under the MIT license.
  */
 module.exports = function(grunt) {
-  "use strict";
+  'use strict';
 
   grunt.initConfig({
-    jshint: {
-      files: [
+    eslint: {
+      options: {
+        config: 'eslint.json'
+      },
+      target: [
         'Gruntfile.js',
         'tasks/*.js',
         '<%= nodeunit.tests %>'
-      ],
-      options: {
-        jshintrc: '.jshintrc'
-      }
+      ]
     },
 
     // Before generating any new files, remove any previously-created files.
@@ -47,10 +47,10 @@ module.exports = function(grunt) {
 
   grunt.loadTasks('tasks');
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['eslint', 'test']);
   grunt.registerTask('test', ['clean', 'trimtrailingspaces', 'nodeunit']);
 };

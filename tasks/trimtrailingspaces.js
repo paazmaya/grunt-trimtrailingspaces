@@ -33,10 +33,10 @@ module.exports = function(grunt) {
             destination = src;
       
         // TODO: would multiline trim regex be more efficient?
-        content.split("\n").forEach(function (line) {
+        content.split('\n').forEach(function (line) {
           trimming.push(line.replace(/\s+$/, ''));
         });
-        trimmed = trimming.join("\n");
+        trimmed = trimming.join('\n');
 
         if (content !== trimmed) {
           changed.push(src);
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
     });
 
     if (changed.length > 0 && options.failIfTrimmed) {
-      grunt.warn(changed.length + " files had whitespace trimmed, and the failIfTrimmed option is set to true.", 6);
+      grunt.warn(changed.length + ' files had whitespace trimmed, and the failIfTrimmed option is set to true.', 6);
     }
     
   });

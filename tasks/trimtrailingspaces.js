@@ -13,11 +13,13 @@ module.exports = function(grunt) {
       
     // Default options extended with user defined
     var options = this.options({
-      encoding: 'utf8'
+      encoding: 'utf8',
+      failIfTrimmed: false
     }),
     fsOptions = { // Filesystem access options
       encoding: options.encoding
-    };
+    },
+    changed = []; // store which files are changed, for later logging, failure check, etc.
     
     this.files.forEach(function(file) {
       
@@ -26,23 +28,33 @@ module.exports = function(grunt) {
         grunt.verbose.writeln('Processing file: ' + src);
            
         var content = grunt.file.read(src, fsOptions),
-            trimmed = [],
+            trimming = [],
+            trimmed = null,
             destination = src;
       
         // TODO: would multiline trim regex be more efficient?
         content.split("\n").forEach(function (line) {
-          trimmed.push(line.replace(/\s+$/, ''));
+          trimming.push(line.replace(/\s+$/, ''));
         });
-        
+        trimmed = trimming.join("\n");
+
+        if (content !== trimmed) {
+          changed.push(src);
+        }
+
         // dest might be undefined, thus use same directory as src
         if (typeof file.dest !== 'undefined') {
           destination = file.dest + '/' + src.split('/').pop();
         }
         
-        grunt.file.write(destination, trimmed.join("\n"), fsOptions);
+        grunt.file.write(destination, trimmed, fsOptions);
         
       });
     });
+
+    if (changed.length > 0 && options.failIfTrimmed) {
+      grunt.warn(changed.length + " files had whitespace trimmed, and the failIfTrimmed option is set to true.", 6);
+    }
     
   });
 

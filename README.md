@@ -42,6 +42,13 @@ files of which will the trailing spaces to be removed.
 
 By using the `src` property for selecting files to be processed, they are replaced by the ones processed.
 
+By setting the `failIfTrimmed` option to true, the grunt task will fail after
+trimming all files if any whitespace was removed.  This is very useful for
+running trimtrailingspaces as a pre-commit task (in combination with
+[grunt-githooks](https://github.com/rhumaric/grunt-githooks)), because it will
+prevent the commit from going through which would not include the trimmimg
+changes.
+
 The examples below are using the [built-in custom filter property](http://gruntjs.com/configuring-tasks#custom-filter-function).
 
 ```js
@@ -50,8 +57,11 @@ The examples below are using the [built-in custom filter property](http://gruntj
   trimtrailingspaces: {
     main: {
       src: ['public_html/js/**/*.js'],
-      filter: 'isFile',
-      encoding: 'utf8'
+      options: {
+        filter: 'isFile',
+        encoding: 'utf8',
+        failIfTrimmed: false
+      }
     }
   }
 

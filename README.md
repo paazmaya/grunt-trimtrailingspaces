@@ -25,7 +25,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the "package.json" by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "~0.3.0"
+  "grunt-trimtrailingspaces": "~0.4.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -108,6 +108,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
   
 ## Changelog
 
+* 2013-12-20    v0.4.0    Fail if trimmed option and use case added
 * 2013-11-07    v0.3.2    Documentation for `filter` in examples
 * 2013-08-28    v0.3.1    Dependency update to Node.js 0.10 from 0.8
 * 2013-07-31    v0.3.0    Added tests and made it possible to save processed files to other location

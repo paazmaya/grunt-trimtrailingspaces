@@ -51,6 +51,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-  grunt.registerTask('default', ['eslint', 'test']);
   grunt.registerTask('test', ['clean', 'trimtrailingspaces', 'nodeunit']);
+  grunt.registerTask('default', ['eslint', 'test']);
 };

@@ -2,7 +2,7 @@
  * grunt-trimtrailingspaces
  * https://github.com/paazmaya/grunt-trimtrailingspaces
  *
- * Copyright (c) 2013 Juga Paazmaya
+ * Copyright (c) Juga Paazmaya <olavic@gmail.com>
  * Licensed under the MIT license.
  */
 module.exports = function(grunt) {
@@ -11,7 +11,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     eslint: {
       options: {
-        config: 'eslint.json'
+        config: 'eslint.json',
+        format: 'compact'
       },
       target: [
         'Gruntfile.js',

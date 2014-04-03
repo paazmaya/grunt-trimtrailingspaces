@@ -2,10 +2,9 @@
  * grunt-trimtrailingspaces
  * https://github.com/paazmaya/grunt-trimtrailingspaces
  *
- * Copyright (c) 2013 Juga Paazmaya <olavic@gmail.com>
+ * Copyright (c) Juga Paazmaya <olavic@gmail.com>
  * Licensed under the MIT license.
  */
-
 module.exports = function(grunt) {
   'use strict';
 
@@ -15,11 +14,11 @@ module.exports = function(grunt) {
     var options = this.options({
       encoding: 'utf8',
       failIfTrimmed: false
-    }),
-    fsOptions = { // Filesystem access options
+    });
+    var fsOptions = { // Filesystem access options
       encoding: options.encoding
-    },
-    changed = []; // store which files are changed, for later logging, failure check, etc.
+    };
+    var changedFiles = []; // store which files are changed, for later logging, failure check, etc.
     
     this.files.forEach(function(file) {
       
@@ -27,19 +26,25 @@ module.exports = function(grunt) {
       file.src.forEach(function(src) {
         grunt.verbose.writeln('Processing file: ' + src);
            
-        var content = grunt.file.read(src, fsOptions),
-            trimming = [],
-            trimmed = null,
-            destination = src;
-      
-        // TODO: would multiline trim regex be more efficient?
+        var content = grunt.file.read(src, fsOptions);
+        var trimming = [];
+        var trimmed = null;
+        var destination = src;
+        var trimmedRows = [];
+        
+        var lineNumber = 1;
         content.split('\n').forEach(function (line) {
-          trimming.push(line.replace(/\s+$/, ''));
+          var after = line.replace(/\s+$/, '');
+          if (after !== line) {
+            trimmedRows.push(lineNumber);
+          }
+          ++lineNumber;
+          trimming.push(after);
         });
         trimmed = trimming.join('\n');
 
-        if (content !== trimmed) {
-          changed.push(src);
+        if (trimmedRows.length > 0) {
+          changedFiles.push(src);
         }
 
         // dest might be undefined, thus use same directory as src
@@ -52,8 +57,8 @@ module.exports = function(grunt) {
       });
     });
 
-    if (changed.length > 0 && options.failIfTrimmed) {
-      grunt.warn(changed.length + ' files had whitespace trimmed, and the failIfTrimmed option is set to true.', 6);
+    if (changedFiles.length > 0 && options.failIfTrimmed) {
+      grunt.warn(changedFiles.length + ' files had whitespace trimmed, and the failIfTrimmed option is set to true.', 6);
     }
     
   });

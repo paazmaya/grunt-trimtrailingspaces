@@ -5,8 +5,10 @@
  * Copyright (c) Juga Paazmaya <olavic@gmail.com>
  * Licensed under the MIT license.
  */
+'use strict';
+  
 module.exports = function(grunt) {
-  'use strict';
+  require('time-grunt')(grunt); // Must be first item
 
   grunt.initConfig({
     eslint: {

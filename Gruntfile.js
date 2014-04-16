@@ -1,4 +1,4 @@
-/*
+/**
  * grunt-trimtrailingspaces
  * https://github.com/paazmaya/grunt-trimtrailingspaces
  *
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     eslint: {
       options: {
         config: 'eslint.json',
-        format: 'compact'
+        format: 'stylish'
       },
       target: [
         'Gruntfile.js',

@@ -40,17 +40,18 @@
     "grunt-cli": "^0.1.13",
     "grunt-eslint": "^0.4",
     "grunt-contrib-clean": "^0.5",
-    "grunt-contrib-nodeunit": "^0.3"
+    "grunt-contrib-nodeunit": "^0.3",
+    "jit-grunt": "^0.5"
   },
   "peerDependencies": {
     "grunt": "^0.4"
   },
   "keywords": [
     "trim",
-    "space", 
-    "trailing", 
-    "blank", 
-    "eol", 
+    "space",
+    "trailing",
+    "blank",
+    "eol",
     "gruntplugin"
   ]
 }

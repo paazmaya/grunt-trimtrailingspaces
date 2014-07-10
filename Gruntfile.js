@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 'use strict';
-  
+
 module.exports = function gruntConf(grunt) {
   require('time-grunt')(grunt); // Must be first item
 
@@ -27,7 +27,7 @@ module.exports = function gruntConf(grunt) {
     clean: {
       tests: ['tmp']
     },
-    
+
     trimtrailingspaces: {
       main: {
         options: {
@@ -40,12 +40,12 @@ module.exports = function gruntConf(grunt) {
         }
       }
     },
-    
+
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js']
     }
-    
+
   });
 
   grunt.loadTasks('tasks');

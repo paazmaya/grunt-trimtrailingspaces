@@ -33,16 +33,14 @@
   "scripts": {
     "test": "grunt test"
   },
-  "dependencies": {
-    "grunt": "^0.4"
-  },
   "devDependencies": {
+    "grunt": "^0.4",
     "grunt-cli": "^0.1.13",
-    "grunt-eslint": "^0.6",
     "grunt-contrib-clean": "^0.5",
     "grunt-contrib-nodeunit": "^0.4",
+    "grunt-eslint": "^0.6",
     "jit-grunt": "^0.7",
-    "time-grunt": "^0.3"
+    "time-grunt": "^0.4"
   },
   "peerDependencies": {
     "grunt": "^0.4"

@@ -10,13 +10,13 @@
 
 ## Getting Started
 
-Add this to your project's `Gruntfile.js` gruntfile:
+Add this to your project's `Gruntfile.js` configuration:
 
 ```js
 grunt.loadNpmTasks('grunt-trimtrailingspaces');
 ```
 
-Then add "grunt-trimtrailingspaces" to your package.json dependencies. This can be done with:
+Then add `grunt-trimtrailingspaces` to your "package.json" dependencies. This can be done with:
 
 ```js
 npm install grunt-trimtrailingspaces --save-dev
@@ -25,7 +25,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the "package.json" by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "~0.4.0"
+  "grunt-trimtrailingspaces": "~0.4"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -110,7 +110,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 * 2013-12-20    v0.4.0    Fail if trimmed option and use case added
 * 2013-11-07    v0.3.2    Documentation for `filter` in examples
-* 2013-08-28    v0.3.1    Dependency update to Node.js 0.10 from 0.8
+* 2013-08-28    v0.3.1    Dependency update to Node.js `0.10` from `0.8`
 * 2013-07-31    v0.3.0    Added tests and made it possible to save processed files to other location
 * 2013-07-25    v0.2.1    Removed `string.js` dependency and use `grunt.file` API
 * 2013-07-11    v0.2.0    Support for Grunt `src` files array
@@ -119,7 +119,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## License
 
-Copyright (c) 2013 Juga Paazmaya <olavic@gmail.com>
+Copyright (c) Juga Paazmaya <olavic@gmail.com>
 
 Licensed under the [MIT license](LICENSE-MIT).
 

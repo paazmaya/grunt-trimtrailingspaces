@@ -46,14 +46,14 @@ module.exports = function trimtrailingspaces(grunt) {
 
         if (trimmedRows.length > 0) {
           changedFiles.push(src);
-        }
 
-        // dest might be undefined, thus use same directory as src
-        if (typeof file.dest !== 'undefined') {
-          destination = file.dest + '/' + src.split('/').pop();
-        }
+          // dest might be undefined, thus use same directory as src
+          if (typeof file.dest !== 'undefined') {
+            destination = file.dest + '/' + src.split('/').pop();
+          }
 
-        grunt.file.write(destination, trimmed, fsOptions);
+          grunt.file.write(destination, trimmed, fsOptions);
+        }
 
       });
     });

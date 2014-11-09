@@ -28,23 +28,9 @@ module.exports = function trimtrailingspaces(grunt) {
         grunt.verbose.writeln('Processing file: ' + src);
 
         var content = grunt.file.read(src, fsOptions);
-        var trimming = [];
-        var trimmed = null;
         var destination = src;
-        var trimmedRows = [];
-
-        var lineNumber = 1;
-        content.split('\n').forEach(function lineEach(line) {
-          var after = line.replace(/\s+$/, '');
-          if (after !== line) {
-            trimmedRows.push(lineNumber);
-          }
-          ++lineNumber;
-          trimming.push(after);
-        });
-        trimmed = trimming.join('\n');
-
-        if (trimmedRows.length > 0) {
+        var trimmed = content.replace(/[ \f\t\v]*$/gm, '');
+        if (content !== trimmed) {
           changedFiles.push(src);
 
           // dest might be undefined, thus use same directory as src

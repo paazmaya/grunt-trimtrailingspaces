@@ -9,6 +9,7 @@
 
 module.exports = function gruntConf(grunt) {
   require('time-grunt')(grunt); // Must be first item
+  require('jit-grunt')(grunt);
 
   grunt.initConfig({
     eslint: {
@@ -50,7 +51,6 @@ module.exports = function gruntConf(grunt) {
 
   grunt.loadTasks('tasks');
 
-  require('jit-grunt')(grunt);
 
   grunt.registerTask('test', ['eslint', 'clean', 'trimtrailingspaces', 'nodeunit']);
   grunt.registerTask('default', ['test']);

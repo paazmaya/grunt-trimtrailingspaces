@@ -37,7 +37,7 @@ The name to use in your own task definitions is `trimtrailingspaces`.
 
 ## Documentation
 
-Add an entry to your "Gruntfile.js", within the `initConfig` object, which will define the 
+Add an entry to your "Gruntfile.js", within the `initConfig` object, which will define the
 files of which will the trailing spaces to be removed.
 
 By using the `src` property for selecting files to be processed, they are replaced by the ones processed.
@@ -69,7 +69,7 @@ The examples below are using the [built-in custom filter property](http://gruntj
 ```
 
 It is possible to save the processed files to a different location by using the `files` property, as shown below.
-The destination (key) should be a directory path in which the src files (array value) are stored. 
+The destination (key) should be a directory path in which the src files (array value) are stored.
 No trailing slash needed.
 
 Please note that this method will create a flat directory of the result.
@@ -90,7 +90,7 @@ Please note that this method will create a flat directory of the result.
   ...
 ```
 
-For further information on how files are matched, please see the 
+For further information on how files are matched, please see the
 documentation of the [minimatch](https://github.com/isaacs/minimatch) package,
 as it is used underneath Grunt.
 
@@ -102,12 +102,13 @@ grunt trimtrailingspaces
 
 ## Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing 
-coding style. Add unit tests for any new or changed functionality. 
+In lieu of a formal styleguide, take care to maintain the existing
+coding style. Add unit tests for any new or changed functionality.
 Lint and test your code using [Grunt](http://gruntjs.com/).
-  
+
 ## Changelog
 
+* 2014-11-10    v1.0.0    Touch file only if it needs to be trimmed. More efficient file handling with single regular expression check
 * 2013-12-20    v0.4.0    Fail if trimmed option and use case added
 * 2013-11-07    v0.3.2    Documentation for `filter` in examples
 * 2013-08-28    v0.3.1    Dependency update to Node.js `0.10` from `0.8`

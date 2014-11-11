@@ -19,8 +19,7 @@ module.exports = function gruntConf(grunt) {
       },
       target: [
         'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>'
+        'tasks/*.js'
       ]
     },
 
@@ -36,7 +35,7 @@ module.exports = function gruntConf(grunt) {
         },
         files: {
           'tmp': [
-            'test/fixtures/*'
+            'test/fixtures/default.txt'
           ]
         }
       },
@@ -54,6 +53,20 @@ module.exports = function gruntConf(grunt) {
         src: [
           'test/fixtures/no-touch-no-trim.txt'
         ]
+      },
+      otherLineEndsOldMac: {
+        files: {
+          'tmp': [
+            'test/fixtures/other-line-ends-old-mac.txt'
+          ]
+        }
+      },
+      otherLineEndsUnix: {
+        files: {
+          'tmp': [
+            'test/fixtures/other-line-ends-unix.txt'
+          ]
+        }
       }
     },
 

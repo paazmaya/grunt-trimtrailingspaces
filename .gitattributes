@@ -1,0 +1,4 @@
+test/fixtures/other-line-ends-old-mac.txt text eol=cr
+test/expected/other-line-ends-old-mac.txt text eol=cr
+test/fixtures/other-line-ends-unix.txt text eol=lf
+test/expected/other-line-ends-unix.txt text eol=lf

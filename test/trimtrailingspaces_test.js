@@ -27,9 +27,11 @@ exports.trimtrailingspaces = {
   testDefault: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default'),
-      expected = grunt.file.read('test/expected/default');
-    test.equal(actual, expected, 'simple one line trim');
+    grunt.task.run('trimtrailingspaces:default');
+
+    var actual = grunt.file.read('tmp/default.txt'),
+      expected = grunt.file.read('test/expected/default.txt');
+    test.equal(actual, expected, 'Simple one line trim');
 
     test.done();
   },
@@ -73,4 +75,30 @@ exports.trimtrailingspaces = {
 
     test.done();
   },
+
+  testOtherLineEndsOldMac: function(test) {
+    test.expect(1);
+
+    grunt.task.run('trimtrailingspaces:otherLineEndsOldMac');
+
+    var actual = grunt.file.read('tmp/other-line-ends-old-mac.txt'),
+      expected = grunt.file.read('test/expected/other-line-ends-old-mac.txt');
+
+    test.equals(actual, expected, 'Old Mac line endings respected');
+
+    test.done();
+  },
+
+  testOtherLineEndsUnix: function(test) {
+    test.expect(1);
+
+    grunt.task.run('trimtrailingspaces:otherLineEndsUnix');
+
+    var actual = grunt.file.read('tmp/other-line-ends-unix.txt'),
+      expected = grunt.file.read('test/expected/other-line-ends-unix.txt');
+
+    test.equals(actual, expected, 'Old Mac line endings respected');
+
+    test.done();
+  }
 };

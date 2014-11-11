@@ -1,0 +1,2 @@
+This file has Unix type of line endings
+and spaces of course

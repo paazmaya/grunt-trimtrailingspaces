@@ -36,7 +36,10 @@ module.exports = function trimtrailingspaces(grunt) {
           ++changedFileCount;
 
           // dest might be undefined, thus use same directory as src
-          if (typeof file.dest !== 'undefined') {
+          if (typeof file.dest === 'string') {
+            if (!grunt.file.exists(file.dest)) {
+              grunt.file.mkdir(file.dest);
+            }
             destination = file.dest + '/' + src.split('/').pop();
           }
 

@@ -97,7 +97,20 @@ exports.trimtrailingspaces = {
     var actual = grunt.file.read('tmp/other-line-ends-unix.txt'),
       expected = grunt.file.read('test/expected/other-line-ends-unix.txt');
 
-    test.equals(actual, expected, 'Old Mac line endings respected');
+    test.equals(actual, expected, 'Unix line endings respected');
+
+    test.done();
+  },
+
+  testOtherLineEndsWindows: function(test) {
+    test.expect(1);
+
+    grunt.task.run('trimtrailingspaces:otherLineEndsWindows');
+
+    var actual = grunt.file.read('tmp/other-line-ends-windows.txt'),
+      expected = grunt.file.read('test/expected/other-line-ends-windows.txt');
+
+    test.equals(actual, expected, 'Windows line endings respected');
 
     test.done();
   }

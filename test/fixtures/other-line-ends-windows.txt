@@ -1,0 +1,3 @@
+This file has Windows type of line endings 
+and spaces of course 
+ 

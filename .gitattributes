@@ -2,3 +2,5 @@ test/fixtures/other-line-ends-old-mac.txt text eol=cr
 test/expected/other-line-ends-old-mac.txt text eol=cr
 test/fixtures/other-line-ends-unix.txt text eol=lf
 test/expected/other-line-ends-unix.txt text eol=lf
+test/fixtures/other-line-ends-windows.txt text eol=crlf
+test/expected/other-line-ends-windows.txt text eol=crlf

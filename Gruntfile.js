@@ -67,6 +67,13 @@ module.exports = function gruntConf(grunt) {
             'test/fixtures/other-line-ends-unix.txt'
           ]
         }
+      },
+      otherLineEndsWindows: {
+        files: {
+          'tmp': [
+            'test/fixtures/other-line-ends-windows.txt'
+          ]
+        }
       }
     },
 

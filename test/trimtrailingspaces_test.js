@@ -1,6 +1,7 @@
 'use strict';
 
 var grunt = require('grunt');
+var fs = require('fs');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -23,11 +24,7 @@ var grunt = require('grunt');
 */
 
 exports.trimtrailingspaces = {
-  setUp: function(done) {
-    // setup here if necessary
-    done();
-  },
-  main: function(test) {
+  testDefault: function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/default'),
@@ -35,5 +32,45 @@ exports.trimtrailingspaces = {
     test.equal(actual, expected, 'simple one line trim');
 
     test.done();
-  }
+  },
+  /*
+  testFailWhenTrimmed: function(test) {
+    test.expect(1);
+
+    // Save original API
+    var gruntWarn = grunt.fail.warn;
+
+    // Rewite stub
+    grunt.fail.warn = function (msg, code) {
+      test.equals(code, 6, 'Failed task specifies error code as defined in the task registration');
+    };
+    
+    // Run task
+    grunt.option('force', true);
+    grunt.task.run('trimtrailingspaces:failWhenTrimmed');
+
+    // Restore original API
+    grunt.fail.warn = gruntWarn;
+
+    test.done();
+  },
+  */
+
+  testNoChangeNoTrim: function(test) {
+    test.expect(1);
+
+    // Read original
+    var original = fs.statSync('test/fixtures/no-touch-no-trim.txt');
+
+    // Run task
+    grunt.task.run('trimtrailingspaces:noChangeNoTrim');
+
+    // Read after
+    var after = fs.statSync('test/fixtures/no-touch-no-trim.txt');
+
+    // Compare milliseconds
+    test.equals(original.mtime.getTime(), after.mtime.getTime(), 'Modification time of the file did not change');
+
+    test.done();
+  },
 };

@@ -30,7 +30,7 @@ module.exports = function gruntConf(grunt) {
     },
 
     trimtrailingspaces: {
-      main: {
+      default: {
         options: {
           encoding: 'ascii'
         },
@@ -39,6 +39,21 @@ module.exports = function gruntConf(grunt) {
             'test/fixtures/*'
           ]
         }
+      },
+      failWhenTrimmed: {
+        options: {
+          failIfTrimmed: true
+        },
+        files: {
+          'tmp': [
+            'test/fixtures/fail-when-trimmed.txt'
+          ]
+        }
+      },
+      noChangeNoTrim: {
+        src: [
+          'test/fixtures/no-touch-no-trim.txt'
+        ]
       }
     },
 
@@ -52,6 +67,7 @@ module.exports = function gruntConf(grunt) {
   grunt.loadTasks('tasks');
 
 
-  grunt.registerTask('test', ['eslint', 'clean', 'trimtrailingspaces', 'nodeunit']);
+  grunt.registerTask('test', ['eslint', 'clean', 'trimtrailingspaces:default', 'nodeunit']);
   grunt.registerTask('default', ['test']);
+
 };

@@ -10,6 +10,7 @@
 module.exports = function trimtrailingspaces(grunt) {
 
   grunt.registerMultiTask('trimtrailingspaces', 'Removing the trailing spaces', function register() {
+    var taskSucceeded = true;
 
     // Default options extended with user defined
     var options = this.options({
@@ -19,7 +20,7 @@ module.exports = function trimtrailingspaces(grunt) {
     var fsOptions = { // Filesystem access options
       encoding: options.encoding
     };
-    var changedFiles = []; // store which files are changed, for later logging, failure check, etc.
+    var changedFileCount = 0;
 
     this.files.forEach(function filesEach(file) {
 
@@ -31,7 +32,8 @@ module.exports = function trimtrailingspaces(grunt) {
         var destination = src;
         var trimmed = content.replace(/[ \f\t\v]*$/gm, '');
         if (content !== trimmed) {
-          changedFiles.push(src);
+          grunt.verbose.writeln('Needed trimming, file: ' + src);
+          ++changedFileCount;
 
           // dest might be undefined, thus use same directory as src
           if (typeof file.dest !== 'undefined') {
@@ -44,10 +46,11 @@ module.exports = function trimtrailingspaces(grunt) {
       });
     });
 
-    if (changedFiles.length > 0 && options.failIfTrimmed) {
-      grunt.warn(changedFiles.length + ' files had whitespace trimmed, and the failIfTrimmed option is set to true.', 6);
+    if (changedFileCount > 0 && options.failIfTrimmed) {
+      grunt.fail.warn(changedFileCount + ' files had whitespace trimmed, and the failIfTrimmed option is set to true.', 6);
     }
 
+    return taskSucceeded;
   });
 
 };

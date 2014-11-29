@@ -109,6 +109,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Changelog
 
+* 2014-11-29    v1.1.0    Source copied to destination even when no trimming occurred
 * 2014-11-10    v1.0.0    Touch file only if it needs to be trimmed. More efficient file handling with single regular expression check
 * 2013-12-20    v0.4.0    Fail if trimmed option and use case added
 * 2013-11-07    v0.3.2    Documentation for `filter` in examples

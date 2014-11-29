@@ -30,21 +30,26 @@ module.exports = function trimtrailingspaces(grunt) {
 
         var content = grunt.file.read(src, fsOptions);
         var destination = src;
+        // dest might be undefined, thus use same directory as src
+        if (typeof file.dest === 'string') {
+          if (!grunt.file.exists(file.dest)) {
+            grunt.file.mkdir(file.dest);
+          }
+          destination = file.dest + '/' + src.split('/').pop();
+        }
+
         var trimmed = content.replace(/[ \f\t\v]*$/gm, '');
+
         if (content !== trimmed) {
           grunt.verbose.writeln('Needed trimming, file: ' + src);
           ++changedFileCount;
-
-          // dest might be undefined, thus use same directory as src
-          if (typeof file.dest === 'string') {
-            if (!grunt.file.exists(file.dest)) {
-              grunt.file.mkdir(file.dest);
-            }
-            destination = file.dest + '/' + src.split('/').pop();
-          }
-
           grunt.file.write(destination, trimmed, fsOptions);
         }
+        else if (src !== destination) {
+          // Copy to destination if not in place modification
+          grunt.file.copy(src, destination, fsOptions);
+        }
+
 
       });
     });

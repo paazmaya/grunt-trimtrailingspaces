@@ -39,20 +39,13 @@ module.exports = function gruntConf(grunt) {
           ]
         }
       },
-      failWhenTrimmed: {
-        options: {
-          failIfTrimmed: true
-        },
+      noChangeNoTrim: {
         files: {
           'tmp': [
-            'test/fixtures/fail-when-trimmed.txt'
+            // Gets only copied to tmp
+            'test/fixtures/no-touch-no-trim.txt'
           ]
         }
-      },
-      noChangeNoTrim: {
-        src: [
-          'test/fixtures/no-touch-no-trim.txt'
-        ]
       },
       otherLineEndsOldMac: {
         files: {
@@ -75,6 +68,18 @@ module.exports = function gruntConf(grunt) {
           ]
         }
       }
+      /*
+      failWhenTrimmed: {
+        options: {
+          failIfTrimmed: true
+        },
+        files: {
+          'tmp': [
+            'test/fixtures/fail-when-trimmed.txt'
+          ]
+        }
+      }
+      */
     },
 
     // Unit tests.
@@ -87,7 +92,7 @@ module.exports = function gruntConf(grunt) {
   grunt.loadTasks('tasks');
 
 
-  grunt.registerTask('test', ['eslint', 'clean', 'trimtrailingspaces:default', 'nodeunit']);
+  grunt.registerTask('test', ['eslint', 'clean', 'trimtrailingspaces', 'nodeunit']);
   grunt.registerTask('default', ['test']);
 
 };

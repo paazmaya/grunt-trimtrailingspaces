@@ -2,11 +2,12 @@
 
 > Trim trailing spaces from each line of the selected files
 
-[![Build Status](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces.png?branch=master)](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces)
-[![Code Climate](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces.png)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces)
-[![Dependency Status](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces.png)](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paazmaya/grunt-trimtrailingspaces/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Build Status](https://img.shields.io/travis/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces)
+[![Code Climate](https://img.shields.io/codeclimate/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces)
+[![Dependency Status](https://img.shields.io/gemnasium/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces)
+[![Built with Grunt](http://img.shields.io/badge/Grunt-0.4-blue.svg?style=flat-square)](http://gruntjs.com/)
+[![Analytics](https://ga-beacon.appspot.com/UA-2643697-15/grunt-trimtrailingspaces/index)](https://github.com/igrigorik/ga-beacon)
+
 
 ## Getting Started
 
@@ -108,6 +109,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Changelog
 
+* 2014-11-29    v1.1.0    Source copied to destination even when no trimming occurred
 * 2014-11-10    v1.0.0    Touch file only if it needs to be trimmed. More efficient file handling with single regular expression check
 * 2013-12-20    v0.4.0    Fail if trimmed option and use case added
 * 2013-11-07    v0.3.2    Documentation for `filter` in examples

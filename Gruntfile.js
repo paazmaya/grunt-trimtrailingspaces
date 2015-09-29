@@ -2,7 +2,7 @@
  * grunt-trimtrailingspaces
  * https://github.com/paazmaya/grunt-trimtrailingspaces
  *
- * Copyright (c) Juga Paazmaya <olavic@gmail.com>
+ * Copyright (c) Juga Paazmaya <paazmaya@yahoo.com>
  * Licensed under the MIT license.
  */
 'use strict';

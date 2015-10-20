@@ -34,14 +34,14 @@ module.exports = function gruntConf(grunt) {
           encoding: 'ascii'
         },
         files: {
-          'tmp': [
+          tmp: [
             'test/fixtures/default.txt'
           ]
         }
       },
       noChangeNoTrim: {
         files: {
-          'tmp': [
+          tmp: [
             // Gets only copied to tmp
             'test/fixtures/no-touch-no-trim.txt'
           ]
@@ -49,21 +49,21 @@ module.exports = function gruntConf(grunt) {
       },
       otherLineEndsOldMac: {
         files: {
-          'tmp': [
+          tmp: [
             'test/fixtures/other-line-ends-old-mac.txt'
           ]
         }
       },
       otherLineEndsUnix: {
         files: {
-          'tmp': [
+          tmp: [
             'test/fixtures/other-line-ends-unix.txt'
           ]
         }
       },
       otherLineEndsWindows: {
         files: {
-          'tmp': [
+          tmp: [
             'test/fixtures/other-line-ends-windows.txt'
           ]
         }
@@ -74,7 +74,7 @@ module.exports = function gruntConf(grunt) {
           failIfTrimmed: true
         },
         files: {
-          'tmp': [
+          tmp: [
             'test/fixtures/fail-when-trimmed.txt'
           ]
         }
@@ -90,7 +90,6 @@ module.exports = function gruntConf(grunt) {
   });
 
   grunt.loadTasks('tasks');
-
 
   grunt.registerTask('test', ['eslint', 'clean', 'trimtrailingspaces', 'nodeunit']);
   grunt.registerTask('default', ['test']);

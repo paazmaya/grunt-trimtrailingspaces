@@ -111,6 +111,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Changelog
 
+* 2015-10-20    v2.0.0    Support Node.js 4+ only. Slightly better output messaging
 * 2014-11-29    v1.1.0    Source copied to destination even when no trimming occurred
 * 2014-11-10    v1.0.0    Touch file only if it needs to be trimmed. More efficient file handling with single regular expression check
 * 2013-12-20    v0.4.0    Fail if trimmed option and use case added
@@ -124,7 +125,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## License
 
-Copyright (c) Juga Paazmaya <olavic@gmail.com>
+Copyright (c) Juga Paazmaya <paazmaya@yahoo.com>
 
-Licensed under the [MIT license](LICENSE-MIT).
+Licensed under the [MIT license](LICENSE).
 

@@ -26,7 +26,8 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/grunt test"
+    "test": "node_modules/.bin/grunt test",
+    "lint": "grunt eslint"
   },
   "devDependencies": {
     "grunt": "~0.4",

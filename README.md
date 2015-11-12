@@ -11,6 +11,8 @@
 
 ## Getting Started
 
+This plugin requires Grunt `~0.4` and Node.js minimum of `4.2.0`.
+
 Add this to your project's `Gruntfile.js` configuration:
 
 ```js
@@ -26,7 +28,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the "package.json" by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "~0.4"
+  "grunt-trimtrailingspaces": "^2.0.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -109,23 +111,23 @@ In lieu of a formal styleguide, take care to maintain the existing
 coding style. Add unit tests for any new or changed functionality.
 Lint and test your code using [Grunt](http://gruntjs.com/).
 
-## Changelog
+## Version history
 
-* 2015-10-20    v2.0.0    Support Node.js 4+ only. Slightly better output messaging
-* 2014-11-29    v1.1.0    Source copied to destination even when no trimming occurred
-* 2014-11-10    v1.0.0    Touch file only if it needs to be trimmed. More efficient file handling with single regular expression check
-* 2013-12-20    v0.4.0    Fail if trimmed option and use case added
-* 2013-11-07    v0.3.2    Documentation for `filter` in examples
-* 2013-08-28    v0.3.1    Dependency update to Node.js `0.10` from `0.8`
-* 2013-07-31    v0.3.0    Added tests and made it possible to save processed files to other location
-* 2013-07-25    v0.2.1    Removed `string.js` dependency and use `grunt.file` API
-* 2013-07-11    v0.2.0    Support for Grunt `src` files array
-* 2013-07-05    v0.1.0    Initial release
+*  `v2.0.0` (2015-10-20) Support Node.js 4+ only. Slightly better output messaging
+*  `v1.1.0` (2014-11-29) Source copied to destination even when no trimming occurred
+*  `v1.0.0` (2014-11-10) Touch file only if it needs to be trimmed. More efficient file handling with single regular expression check
+*  `v0.4.0` (2013-12-20) Fail if trimmed option and use case added
+*  `v0.3.2` (2013-11-07) Documentation for `filter` in examples
+*  `v0.3.1` (2013-08-28) Dependency update to Node.js `0.10` from `0.8`
+*  `v0.3.0` (2013-07-31) Added tests and made it possible to save processed files to other location
+*  `v0.2.1` (2013-07-25) Removed `string.js` dependency and use `grunt.file` API
+*  `v0.2.0` (2013-07-11) Support for Grunt `src` files array
+*  `v0.1.0` (2013-07-05) Initial release
 
 
 ## License
 
-Copyright (c) Juga Paazmaya <paazmaya@yahoo.com>
+Copyright (c) [Juga Paazmaya <paazmaya@yahoo.com>](http://paazmaya.fi)
 
 Licensed under the [MIT license](LICENSE).
 

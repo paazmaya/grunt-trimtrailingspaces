@@ -7,41 +7,43 @@
  */
 'use strict';
 
+const path = require('path');
+
 module.exports = function trimtrailingspaces(grunt) {
 
   grunt.registerMultiTask('trimtrailingspaces', 'Removing the trailing spaces', function register() {
-    var taskSucceeded = true;
+    let taskSucceeded = true;
 
     // Default options extended with user defined
-    var options = this.options({
+    const options = this.options({
       encoding: 'utf8',
       failIfTrimmed: false
     });
-    var fsOptions = { // Filesystem access options
+    const fsOptions = { // Filesystem access options
       encoding: options.encoding
     };
 
-    var changedFileCount = 0;
-    var fileCount = 0;
-    var successCount = 0;
+    let changedFileCount = 0;
+    let fileCount = 0;
+    let successCount = 0;
 
-    this.files.forEach(function filesEach(file) {
+    const filesEach = function filesEach(file) {
 
       // Iterate src as that is where the actual files are
       file.src.forEach(function srcEach(src) {
         grunt.verbose.writeln('Processing file: ' + src);
         fileCount++;
-        var content = grunt.file.read(src, fsOptions);
-        var destination = src;
+        const content = grunt.file.read(src, fsOptions);
+        let destination = src;
         // dest might be undefined, thus use same directory as src
         if (typeof file.dest === 'string') {
           if (!grunt.file.exists(file.dest)) {
             grunt.file.mkdir(file.dest);
           }
-          destination = file.dest + '/' + src.split('/').pop();
+          destination = path.join(file.dest, path.basename(src));
         }
 
-        var trimmed = content.replace(/[ \f\t\v]*$/gm, '');
+        const trimmed = content.replace(/[ \f\t\v]*$/gm, '');
 
         if (content !== trimmed) {
           grunt.log.ok('Needed trimming, file: ' + src);
@@ -53,7 +55,9 @@ module.exports = function trimtrailingspaces(grunt) {
           grunt.file.copy(src, destination, fsOptions);
         }
       });
-    });
+    };
+
+    this.files.forEach(filesEach);
 
     successCount = fileCount - changedFileCount;
     grunt.log.ok(successCount + ' file' + (successCount === 1 ? '' : 's') + ' free of trailing whitespace.');

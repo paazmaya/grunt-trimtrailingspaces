@@ -12,7 +12,7 @@
 ## Getting Started
 
 This plugin requires [Grunt](http://gruntjs.com/) `~0.4` and [Node.js](https://nodejs.org/en/)
-version to be `4.2.0`, which is the Long Term Support (LTS) version.
+version to be minimum of `4.2.0`, which is the Long Term Support (LTS) version.
 
 Add this to your project's `Gruntfile.js` configuration:
 

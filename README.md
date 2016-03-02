@@ -11,7 +11,7 @@
 
 ## Getting Started
 
-This plugin requires [Grunt](http://gruntjs.com/) `~0.4` and [Node.js](https://nodejs.org/en/)
+This plugin requires [Grunt](http://gruntjs.com/) `>=0.4.0` and [Node.js](https://nodejs.org/en/)
 version to be minimum of `4.2.0`, which is the Long Term Support (LTS) version.
 
 Add this to your project's `Gruntfile.js` configuration:
@@ -29,7 +29,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the `package.json` file by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "^2.0.0"
+  "grunt-trimtrailingspaces": "^2.2.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -50,7 +50,7 @@ By using the `src` property for selecting files to be processed, they are replac
 By setting the `failIfTrimmed` option to true, the grunt task will fail after
 trimming all files if any whitespace was removed.  This is very useful for
 running trimtrailingspaces as a pre-commit task (in combination with
-[grunt-githooks](https://github.com/rhumaric/grunt-githooks)), because it will
+[`grunt-githooks`](https://github.com/rhumaric/grunt-githooks)), because it will
 prevent the commit from going through which would not include the trimming
 changes.
 
@@ -115,6 +115,8 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Version history
 
+* `v2.2.0` (2016-03-02)
+  - Update dependencies again and allow using Grunt 1.0.0, that should come out soon
 * `v2.1.0` (2016-02-15)
   - Minimum Node.js version supported is `4.2.0` (LTS)
   - Update dependencies
@@ -143,7 +145,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## License
 
-Copyright (c) [Juga Paazmaya](http://www.paazmaya.fi) <paazmaya@yahoo.com>
+Copyright (c) [Juga Paazmaya](http://paazmaya.fi) <paazmaya@yahoo.com>
 
 Licensed under the [MIT license](LICENSE).
 

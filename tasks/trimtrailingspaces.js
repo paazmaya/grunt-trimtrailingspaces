@@ -9,7 +9,22 @@
 
 const path = require('path');
 
+
 module.exports = function trimtrailingspaces(grunt) {
+
+  const getDestination = (src, dest) => {
+    let destination = src;
+
+    // dest might be undefined, thus use same directory as src
+    if (typeof dest === 'string') {
+      if (!grunt.file.exists(dest)) {
+        grunt.file.mkdir(dest);
+      }
+      destination = path.join(dest, path.basename(src));
+    }
+
+    return destination;
+  };
 
   grunt.registerMultiTask('trimtrailingspaces', 'Removing the trailing spaces', function register() {
     let taskSucceeded = true;
@@ -30,18 +45,11 @@ module.exports = function trimtrailingspaces(grunt) {
     const filesEach = function filesEach(file) {
 
       // Iterate src as that is where the actual files are
-      file.src.forEach(function srcEach(src) {
+      file.src.forEach((src) => {
         grunt.verbose.writeln('Processing file: ' + src);
         fileCount++;
         const content = grunt.file.read(src, fsOptions);
-        let destination = src;
-        // dest might be undefined, thus use same directory as src
-        if (typeof file.dest === 'string') {
-          if (!grunt.file.exists(file.dest)) {
-            grunt.file.mkdir(file.dest);
-          }
-          destination = path.join(file.dest, path.basename(src));
-        }
+        const destination = getDestination(src, file.dest);
 
         const trimmed = content.replace(/[ \f\t\v]*$/gm, '');
 

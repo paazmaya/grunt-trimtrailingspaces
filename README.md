@@ -5,13 +5,13 @@
 [![Build Status](https://img.shields.io/travis/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces)
 [![Code Climate](https://img.shields.io/codeclimate/github/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces)
 [![Dependency Status](https://img.shields.io/gemnasium/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces)
-[![Built with Grunt](http://img.shields.io/badge/Grunt-0.4-blue.svg?style=flat-square)](http://gruntjs.com/)
+[![Built with Grunt](http://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](http://gruntjs.com/)
 [![Analytics](https://ga-beacon.appspot.com/UA-2643697-15/grunt-trimtrailingspaces/index?flat)](https://github.com/igrigorik/ga-beacon)
 
 
 ## Getting Started
 
-This plugin requires [Grunt](http://gruntjs.com/) `>=0.4.0` and [Node.js](https://nodejs.org/en/)
+This plugin requires [Grunt](http://gruntjs.com/) `~1.0` and [Node.js](https://nodejs.org/en/)
 version to be minimum of `4.2.0`, which is the Long Term Support (LTS) version.
 
 Add this to your project's `Gruntfile.js` configuration:
@@ -29,7 +29,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the `package.json` file by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "^2.2.0"
+  "grunt-trimtrailingspaces": "^2.3.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -115,6 +115,8 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Version history
 
+* `v2.3.0` (2016-04-05)
+  - Update dependencies and remove `grunt-cli` from `devDependencies` as it is in `grunt` now
 * `v2.2.0` (2016-03-02)
   - Update dependencies again and allow using Grunt 1.0.0, that should come out soon
 * `v2.1.0` (2016-02-15)

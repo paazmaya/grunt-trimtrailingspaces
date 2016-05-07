@@ -27,7 +27,6 @@ module.exports = function trimtrailingspaces(grunt) {
   };
 
   grunt.registerMultiTask('trimtrailingspaces', 'Removing the trailing spaces', function register() {
-    let taskSucceeded = true;
 
     // Default options extended with user defined
     const options = this.options({
@@ -76,8 +75,6 @@ module.exports = function trimtrailingspaces(grunt) {
         grunt.fail.warn(options.failMsg || 'The failIfTrimmed option is set to true.', 6);
       }
     }
-
-    return taskSucceeded;
   });
 
 };

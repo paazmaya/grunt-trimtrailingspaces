@@ -12,17 +12,6 @@ module.exports = function gruntConf(grunt) {
   require('jit-grunt')(grunt);
 
   grunt.initConfig({
-    eslint: {
-      options: {
-        config: '.eslintrc.json',
-        format: 'stylish'
-      },
-      target: [
-        'Gruntfile.js',
-        'tasks/*.js'
-      ]
-    },
-
     // Before generating any new files, remove any previously-created files.
     clean: {
       tests: ['tmp']
@@ -91,7 +80,7 @@ module.exports = function gruntConf(grunt) {
 
   grunt.loadTasks('tasks');
 
-  grunt.registerTask('test', ['eslint', 'clean', 'trimtrailingspaces', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'trimtrailingspaces', 'nodeunit']);
   grunt.registerTask('default', ['test']);
 
 };

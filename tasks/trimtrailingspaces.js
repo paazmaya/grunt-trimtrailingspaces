@@ -5,10 +5,10 @@
  * Copyright (c) Juga Paazmaya <paazmaya@yahoo.com> (https://paazmaya.fi)
  * Licensed under the MIT license.
  */
+
 'use strict';
 
 const path = require('path');
-
 
 module.exports = function trimtrailingspaces(grunt) {
 
@@ -67,10 +67,14 @@ module.exports = function trimtrailingspaces(grunt) {
     this.files.forEach(filesEach);
 
     successCount = fileCount - changedFileCount;
-    grunt.log.ok(successCount + ' file' + (successCount === 1 ? '' : 's') + ' free of trailing whitespace.');
+    grunt.log.ok(successCount + ' file' + (successCount === 1 ?
+      '' :
+      's') + ' free of trailing whitespace.');
 
     if (changedFileCount > 0) {
-      grunt.log.ok(changedFileCount + ' file' + (changedFileCount === 1 ? '' : 's') + ' had whitespace trimmed.');
+      grunt.log.ok(changedFileCount + ' file' + (changedFileCount === 1 ?
+        '' :
+        's') + ' had whitespace trimmed.');
       if (options.failIfTrimmed) {
         grunt.fail.warn(options.failMsg || 'The failIfTrimmed option is set to true.', 6);
       }

@@ -12,7 +12,7 @@
 ## Getting Started
 
 This plugin requires [Grunt](http://gruntjs.com/) `~1.0` and [Node.js](https://nodejs.org/en/)
-version to be minimum of `4.2.0`, which is the Long Term Support (LTS) version.
+version to be minimum of `6.9.5`, which is the Long Term Support (LTS) version.
 
 Add this to your project's `Gruntfile.js` configuration:
 
@@ -116,6 +116,8 @@ There should be no errors appearing after any JavaScript file changes.
 
 ## Version history
 
+* `v3.0.0` (2017)
+  - Minimum supported Node.js version is now `6.9.5`
 * `v2.3.1` (2016-08-10)
   - Dependencies are sure :tophat: up to date
   - Use shared ESLint configuration and ESLint directly without the Grunt.js plugin
@@ -154,4 +156,3 @@ There should be no errors appearing after any JavaScript file changes.
 Copyright (c) [Juga Paazmaya](https://paazmaya.fi) <paazmaya@yahoo.com>
 
 Licensed under the [MIT license](LICENSE).
-

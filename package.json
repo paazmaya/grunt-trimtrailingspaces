@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "grunt test",
-    "lint": "eslint -c .eslintrc.json tasks Gruntfile.js"
+    "lint": "eslint tasks Gruntfile.js"
   },
   "devDependencies": {
     "eslint": "~3.19.0",

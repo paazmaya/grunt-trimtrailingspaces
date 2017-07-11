@@ -116,8 +116,9 @@ There should be no errors appearing after any JavaScript file changes.
 
 ## Version history
 
-* `v3.0.0` (2017)
-  - Minimum supported Node.js version is now `6.9.5`
+* `v3.0.0` (2017-07)
+  - Minimum Node.js version lifted from `4.2.0` to `6.9.5`
+  - `main` property in `package.json` was pointing to a wrong file
 * `v2.3.1` (2016-08-10)
   - Dependencies are sure :tophat: up to date
   - Use shared ESLint configuration and ESLint directly without the Grunt.js plugin

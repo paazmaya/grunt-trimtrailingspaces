@@ -24,9 +24,7 @@ module.exports = function gruntConf(grunt) {
           encoding: 'ascii'
         },
         files: {
-          tmp: [
-            'test/fixtures/default.txt'
-          ]
+          tmp: ['test/fixtures/default.txt']
         }
       },
       noChangeNoTrim: {
@@ -39,23 +37,17 @@ module.exports = function gruntConf(grunt) {
       },
       otherLineEndsOldMac: {
         files: {
-          tmp: [
-            'test/fixtures/other-line-ends-old-mac.txt'
-          ]
+          tmp: ['test/fixtures/other-line-ends-old-mac.txt']
         }
       },
       otherLineEndsUnix: {
         files: {
-          tmp: [
-            'test/fixtures/other-line-ends-unix.txt'
-          ]
+          tmp: ['test/fixtures/other-line-ends-unix.txt']
         }
       },
       otherLineEndsWindows: {
         files: {
-          tmp: [
-            'test/fixtures/other-line-ends-windows.txt'
-          ]
+          tmp: ['test/fixtures/other-line-ends-windows.txt']
         }
       }
       /*

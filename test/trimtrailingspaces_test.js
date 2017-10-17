@@ -76,28 +76,19 @@ exports.trimtrailingspaces = {
     test.equals(actual, expected, 'Windows line endings respected');
 
     test.done();
-  }
+  },
 
-  /*
+  
   testFailWhenTrimmed: function(test) {
     test.expect(1);
 
-    // Save original API
-    var gruntWarn = grunt.fail.warn;
-
-    // Rewite stub
-    grunt.fail.warn = function (msg, code) {
-      test.equals(code, 6, 'Failed task specifies error code as defined in the task registration');
-    };
-    
-    // Run task
-    grunt.option('force', true);
-    grunt.task.run('trimtrailingspaces:failWhenTrimmed');
-
-    // Restore original API
-    grunt.fail.warn = gruntWarn;
-
-    test.done();
-  },
-  */
+    grunt.util.spawn({
+      grunt: true,
+      args: ['trimtrailingspaces:failWhenTrimmed']
+    }, function(err, result) {
+      test.equals(result.code, 3, 'failIfTrimmed warning code');
+      test.done();
+    });
+  }
+  
 };

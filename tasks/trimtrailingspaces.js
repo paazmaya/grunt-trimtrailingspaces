@@ -26,6 +26,17 @@ module.exports = function trimtrailingspaces(grunt) {
     return destination;
   };
 
+  const logResult = (changedFileCount, options) => {
+    if (changedFileCount > 0) {
+      grunt.log.ok(changedFileCount + ' file' + (changedFileCount === 1 ?
+        '' :
+        's') + ' had whitespace trimmed.');
+      if (options.failIfTrimmed) {
+        grunt.fail.warn(options.failMsg || 'The failIfTrimmed option is set to true.', 6);
+      }
+    }
+  };
+
   grunt.registerMultiTask('trimtrailingspaces', 'Removing the trailing spaces', function register() {
 
     // Default options extended with user defined
@@ -71,14 +82,6 @@ module.exports = function trimtrailingspaces(grunt) {
       '' :
       's') + ' free of trailing whitespace.');
 
-    if (changedFileCount > 0) {
-      grunt.log.ok(changedFileCount + ' file' + (changedFileCount === 1 ?
-        '' :
-        's') + ' had whitespace trimmed.');
-      if (options.failIfTrimmed) {
-        grunt.fail.warn(options.failMsg || 'The failIfTrimmed option is set to true.', 6);
-      }
-    }
+    logResult(changedFileCount, options);
   });
-
 };

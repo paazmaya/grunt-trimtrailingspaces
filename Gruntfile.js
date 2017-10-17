@@ -50,18 +50,6 @@ module.exports = function gruntConf(grunt) {
           tmp: ['test/fixtures/other-line-ends-windows.txt']
         }
       }
-      /*
-      failWhenTrimmed: {
-        options: {
-          failIfTrimmed: true
-        },
-        files: {
-          tmp: [
-            'test/fixtures/fail-when-trimmed.txt'
-          ]
-        }
-      }
-      */
     },
 
     // Unit tests.

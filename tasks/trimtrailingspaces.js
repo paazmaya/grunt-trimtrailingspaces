@@ -61,7 +61,7 @@ module.exports = function trimtrailingspaces(grunt) {
         const content = grunt.file.read(src, fsOptions);
         const destination = getDestination(src, file.dest);
 
-        const trimmed = content.replace(/[ \f\t\v]*$/gm, '');
+        const trimmed = content.replace(/[ \f\t\v]*$/gmu, '');
 
         if (content !== trimmed) {
           grunt.log.ok('Needed trimming, file: ' + src);

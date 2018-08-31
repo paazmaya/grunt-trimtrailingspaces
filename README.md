@@ -4,7 +4,7 @@
 
 [![Build Status](https://img.shields.io/travis/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://travis-ci.org/paazmaya/grunt-trimtrailingspaces)
 [![Code Climate](https://img.shields.io/codeclimate/github/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces)
-[![Dependency Status](https://img.shields.io/gemnasium/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://gemnasium.com/paazmaya/grunt-trimtrailingspaces)
+[![devDependencies Status](https://david-dm.org/paazmaya/grunt-trimtrailingspaces/dev-status.svg)](https://david-dm.org/paazmaya/grunt-trimtrailingspaces?type=dev)
 [![Built with Grunt](http://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](http://gruntjs.com/)
 [![Analytics](https://ga-beacon.appspot.com/UA-2643697-15/grunt-trimtrailingspaces/index?flat)](https://github.com/igrigorik/ga-beacon)
 

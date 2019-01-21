@@ -29,7 +29,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the `package.json` file by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "^2.3.0"
+  "grunt-trimtrailingspaces": "^4.0.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -116,6 +116,8 @@ There should be no errors appearing after any JavaScript file changes.
 
 ## Version history
 
+* `v4.0.0` (2019-01-22)
+  - Minimum Node.js version lifted from `6.9.5` to `8.11.1`. That is all.
 * `v3.0.0` (2017-10-17)
   - Minimum Node.js version lifted from `4.2.0` to `6.9.5`
   - `main` property in `package.json` was pointing to a wrong file

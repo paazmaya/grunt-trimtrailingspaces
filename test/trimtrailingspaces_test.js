@@ -1,7 +1,7 @@
 'use strict';
 
-var grunt = require('grunt');
-var fs = require('fs');
+const grunt = require('grunt');
+const fs = require('fs');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -27,7 +27,7 @@ exports.trimtrailingspaces = {
   testDefault: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default.txt'),
+    const actual = grunt.file.read('tmp/default.txt'),
       expected = grunt.file.read('test/expected/default.txt');
     test.equal(actual, expected, 'Simple one line trim');
 
@@ -37,7 +37,7 @@ exports.trimtrailingspaces = {
   testNoChangeNoTrim: function(test) {
     test.expect(1);
 
-    var original = grunt.file.read('test/fixtures/no-touch-no-trim.txt'),
+    const original = grunt.file.read('test/fixtures/no-touch-no-trim.txt'),
       resulted = grunt.file.read('tmp/no-touch-no-trim.txt');
 
     test.equals(original, resulted, 'Contents of the file did not change');
@@ -48,7 +48,7 @@ exports.trimtrailingspaces = {
   testOtherLineEndsOldMac: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/other-line-ends-old-mac.txt'),
+    const actual = grunt.file.read('tmp/other-line-ends-old-mac.txt'),
       expected = grunt.file.read('test/expected/other-line-ends-old-mac.txt');
 
     test.equals(actual, expected, 'Old Mac line endings respected');
@@ -59,7 +59,7 @@ exports.trimtrailingspaces = {
   testOtherLineEndsUnix: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/other-line-ends-unix.txt'),
+    const actual = grunt.file.read('tmp/other-line-ends-unix.txt'),
       expected = grunt.file.read('test/expected/other-line-ends-unix.txt');
 
     test.equals(actual, expected, 'Unix line endings respected');
@@ -70,7 +70,7 @@ exports.trimtrailingspaces = {
   testOtherLineEndsWindows: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/other-line-ends-windows.txt'),
+    const actual = grunt.file.read('tmp/other-line-ends-windows.txt'),
       expected = grunt.file.read('test/expected/other-line-ends-windows.txt');
 
     test.equals(actual, expected, 'Windows line endings respected');
@@ -78,7 +78,7 @@ exports.trimtrailingspaces = {
     test.done();
   },
 
-  
+
   testFailWhenTrimmed: function(test) {
     test.expect(1);
 
@@ -90,5 +90,5 @@ exports.trimtrailingspaces = {
       test.done();
     });
   }
-  
+
 };

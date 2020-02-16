@@ -1,4 +1,4 @@
-'use strict';
+
 
 const grunt = require('grunt');
 const fs = require('fs');

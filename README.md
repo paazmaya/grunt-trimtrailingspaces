@@ -6,13 +6,12 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces)
 [![devDependencies Status](https://david-dm.org/paazmaya/grunt-trimtrailingspaces/dev-status.svg)](https://david-dm.org/paazmaya/grunt-trimtrailingspaces?type=dev)
 [![Built with Grunt](http://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](http://gruntjs.com/)
-[![Analytics](https://ga-beacon.appspot.com/UA-2643697-15/grunt-trimtrailingspaces/index?flat)](https://github.com/igrigorik/ga-beacon)
 
 
 ## Getting Started
 
 This plugin requires [Grunt](http://gruntjs.com/) `~1.0` and [Node.js](https://nodejs.org/en/)
-version to be minimum of `8.11.1`, which is [the active Long Term Support (LTS) version](https://github.com/nodejs/Release#release-schedule).
+version to be minimum of `10.13.0`, which is [the active Long Term Support (LTS) version](https://github.com/nodejs/Release#release-schedule).
 
 Add this to your project's `Gruntfile.js` configuration:
 
@@ -29,7 +28,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the `package.json` file by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "^4.0.0"
+  "grunt-trimtrailingspaces": "^5.0.0"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`
@@ -116,6 +115,10 @@ There should be no errors appearing after any JavaScript file changes.
 
 ## Version history
 
+* `v5.0.0` (2020-05-28)
+  - Minimum Node.js version lifted from `8.11.1` to `10.13.0`
+  - Dependencies updated of course :tophat:
+  - Run tests with versions 10, 12, and 14 of Node.js at Travis CI
 * `v4.0.0` (2019-01-22)
   - Minimum Node.js version lifted from `6.9.5` to `8.11.1`. That is all.
 * `v3.0.0` (2017-10-17)

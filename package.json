@@ -1,7 +1,7 @@
 {
   "name": "grunt-trimtrailingspaces",
   "description": "Trim trailing spaces from each line of the selected files",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "homepage": "https://github.com/paazmaya/grunt-trimtrailingspaces",
   "author": {
     "name": "Juga Paazmaya",
@@ -30,16 +30,16 @@
     "lint": "eslint tasks Gruntfile.js"
   },
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-paazmaya": "5.3.0",
-    "grunt": "^1.0.4",
+    "eslint": "7.1.0",
+    "eslint-config-paazmaya": "7.0.0",
+    "grunt": "1.1.0",
     "grunt-contrib-clean": "2.0.0",
-    "grunt-contrib-nodeunit": "2.0.0",
+    "grunt-contrib-nodeunit": "2.1.0",
     "jit-grunt": "0.10.0",
     "time-grunt": "2.0.0"
   },
   "peerDependencies": {
-    "grunt": "~1.0"
+    "grunt": "~1.1"
   },
   "keywords": [
     "trim",

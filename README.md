@@ -2,7 +2,7 @@
 
 > Trim trailing spaces from each line of the selected files
 
-[![Build Status](https://img.shields.io/travis/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://travis-ci.com/paazmaya/grunt-trimtrailingspaces)
+[![Build Status](https://img.shields.io/travis/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://app.travis-ci.com/paazmaya/grunt-trimtrailingspaces)
 [![Maintainability](https://api.codeclimate.com/v1/badges/94ce97d2f05828f8ba0a/maintainability)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces/maintainability)
 [![devDependencies Status](https://david-dm.org/paazmaya/grunt-trimtrailingspaces/dev-status.svg)](https://david-dm.org/paazmaya/grunt-trimtrailingspaces?type=dev)
 [![Built with Grunt](http://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](http://gruntjs.com/)

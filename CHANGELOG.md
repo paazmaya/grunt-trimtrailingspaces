@@ -4,7 +4,10 @@ This changelog covers the version history and possible upcoming changes.
 It follows the guidance from https://keepachangelog.com/en/1.0.0/.
 
 ## Unreleased
+
+## `v6.0.0` (2022-05-29)
 - Minimum supported Node.js version lifted from `10.13.0` to `14.15.0`
+- Widen up peer dependency for Grunt
 
 ## `v5.0.0` (2020-05-28)
 - Minimum Node.js version lifted from `8.11.1` to `10.13.0`

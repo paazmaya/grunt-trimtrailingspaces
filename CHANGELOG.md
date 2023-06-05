@@ -6,7 +6,7 @@ It follows the guidance from https://keepachangelog.com/en/1.0.0/.
 ## Unreleased
 
 ## `v6.0.1` (2023-06-05)
-- It's all ES Modules now
+
 - 
 
 ## `v6.0.0` (2022-05-29)

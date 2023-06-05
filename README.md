@@ -4,7 +4,6 @@
 
 [![Build Status](https://img.shields.io/travis/paazmaya/grunt-trimtrailingspaces.svg?style=flat-square)](https://app.travis-ci.com/paazmaya/grunt-trimtrailingspaces)
 [![Maintainability](https://api.codeclimate.com/v1/badges/94ce97d2f05828f8ba0a/maintainability)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces/maintainability)
-
 [![Built with Grunt](http://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](http://gruntjs.com/)
 
 
@@ -28,7 +27,7 @@ npm install grunt-trimtrailingspaces --save-dev
 Or by manually editing the `package.json` file by adding the following line inside `devDependencies` object:
 
 ```js
-  "grunt-trimtrailingspaces": "^5.0.0"
+  "grunt-trimtrailingspaces": "^6.0.1"
 ```
 
 Later on it would be possible to install the plugin with the command `npm install`

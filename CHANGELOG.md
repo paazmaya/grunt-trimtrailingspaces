@@ -5,7 +5,10 @@ It follows the guidance from https://keepachangelog.com/en/1.0.0/.
 
 ## Unreleased
 
+- Minimum supported Node.js version lifted from `14.15.0` to `22.11.0`
+
 ## `v6.0.0` (2022-05-29)
+
 - Minimum supported Node.js version lifted from `10.13.0` to `14.15.0`
 - Widen up peer dependency for Grunt
 

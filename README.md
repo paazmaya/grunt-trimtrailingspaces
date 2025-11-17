@@ -5,7 +5,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/94ce97d2f05828f8ba0a/maintainability)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces/maintainability)
 [![Built with Grunt](http://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](http://gruntjs.com/)
 
-
 ## Getting Started
 
 This plugin requires [Grunt](http://gruntjs.com/) `^1.1` and [Node.js](https://nodejs.org/en/)
@@ -14,7 +13,7 @@ version to be minimum of `14.15.0`, which is [the active Long Term Support (LTS)
 Add this to your project's `Gruntfile.js` configuration:
 
 ```js
-grunt.loadNpmTasks('grunt-trimtrailingspaces');
+grunt.loadNpmTasks("grunt-trimtrailingspaces");
 ```
 
 Then add `grunt-trimtrailingspaces` to your "package.json" dependencies. This can be done with:
@@ -36,7 +35,6 @@ It can be updated with the command `npm update`, in case there is a newer versio
 
 The name to use in your own task definitions is `trimtrailingspaces`.
 
-
 ## Documentation
 
 Add an entry to your `Gruntfile.js`, within the `initConfig` object, which will define the
@@ -45,7 +43,7 @@ files of which will the trailing spaces to be removed.
 By using the `src` property for selecting files to be processed, they are replaced by the ones processed.
 
 By setting the `failIfTrimmed` option to true, the grunt task will fail after
-trimming all files if any whitespace was removed.  This is very useful for
+trimming all files if any whitespace was removed. This is very useful for
 running trimtrailingspaces as a pre-commit task (in combination with
 [`grunt-githooks`](https://github.com/rhumaric/grunt-githooks)), because it will
 prevent the commit from going through which would not include the trimming

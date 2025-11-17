@@ -8,10 +8,10 @@ How to reproduce with minimal working example.
 
 ### Versions and environment
 
- * Operating system:
- * Node.js:
- * npm:
- * Grunt.js:
- * grunt-trimtrailingspaces:
+- Operating system:
+- Node.js:
+- npm:
+- Grunt.js:
+- grunt-trimtrailingspaces:
 
 Thank you and have some :pizza:.

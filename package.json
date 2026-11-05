@@ -10,16 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/paazmaya/grunt-trimtrailingspaces.git"
+    "url": "git+https://github.com/paazmaya/grunt-trimtrailingspaces.git"
   },
   "bugs": {
     "url": "https://github.com/paazmaya/grunt-trimtrailingspaces/issues"
   },
   "license": "MIT",
   "files": [
-    "LICENSE",
-    "tasks",
-    "README.md"
+    "tasks"
   ],
   "main": "tasks/trimtrailingspaces.js",
   "engines": {

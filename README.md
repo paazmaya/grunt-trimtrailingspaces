@@ -3,12 +3,12 @@
 > Trim trailing spaces from each line of the selected files
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/94ce97d2f05828f8ba0a/maintainability)](https://codeclimate.com/github/paazmaya/grunt-trimtrailingspaces/maintainability)
-[![Built with Grunt](http://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](http://gruntjs.com/)
+[![Built with Grunt](https://img.shields.io/badge/Grunt-1.0-blue.svg?style=flat-square)](https://gruntjs.com/)
 
 ## Getting Started
 
-This plugin requires [Grunt](http://gruntjs.com/) `^1.1` and [Node.js](https://nodejs.org/en/)
-version to be minimum of `14.15.0`, which is [the active Long Term Support (LTS) version](https://github.com/nodejs/Release#release-schedule).
+This plugin requires [Grunt](https://gruntjs.com/) `^1.1` and [Node.js](https://nodejs.org/en/)
+version to be minimum of `24.12.0`, which is [the active Long Term Support (LTS) version](https://github.com/nodejs/Release#release-schedule).
 
 Add this to your project's `Gruntfile.js` configuration:
 
@@ -49,7 +49,7 @@ running trimtrailingspaces as a pre-commit task (in combination with
 prevent the commit from going through which would not include the trimming
 changes.
 
-The examples below are using the [built-in custom filter property](http://gruntjs.com/configuring-tasks#custom-filter-function).
+The examples below are using the [built-in custom filter property](https://gruntjs.com/configuring-tasks#custom-filter-function).
 
 ```js
   ...
@@ -102,11 +102,11 @@ grunt trimtrailingspaces
 
 ## Contributing
 
-["A Beginner's Guide to Open Source: The Best Advice for Making your First Contribution"](http://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-the-best-advice-for-making-your-first-contribution/).
+["A Beginner's Guide to Open Source: The Best Advice for Making your First Contribution"](https://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-the-best-advice-for-making-your-first-contribution/).
 
 [Also there is a blog post about "45 Github Issues Dos and Don’ts"](https://davidwalsh.name/45-github-issues-dos-donts).
 
-Linting is done with [ESLint](http://eslint.org) and can be executed with `npm run lint`.
+Linting is done with [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) and can be executed with `npm run lint`.
 There should be no errors appearing after any JavaScript file changes.
 
 ## Version history
